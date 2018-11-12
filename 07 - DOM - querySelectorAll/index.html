@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+	<meta charset="UTF-8">
+	<title> DOM - querySelectorAll </title>
+
+</head>
+
+<body>
+	
+	<div class="teste"> 1 </div>
+	<div class="teste"> 2 </div>
+	<div class="teste"> 3 </div>
+
+	<div id="pai"> 
+		<div class="filho"> 1 </div>
+		<div class="filho"> 2 </div>
+		<div class="filho"> 3 </div>
+	</div>
+
+
+	<p> Ola! </p>
+	<p> Hello! </p>
+
+	<script type="text/javascript">
+
+		console.log(
+
+			document.getElementById("pai").querySelectorAll(".filho")
+
+			)
+
+	
+	</script>
+
+</body>
+
+
+
+
+</html>
