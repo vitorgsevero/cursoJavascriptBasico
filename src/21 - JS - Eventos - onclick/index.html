@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+	<meta charset="UTF-8">
+	<title> JS - Eventos - onclick </title>
+
+</head>
+
+<body>
+
+
+    <h4 id="title">Meu botão</h4>
+    <button id="btn">Click me!</button> 
+
+    <script type="text/javascript">
+
+        var botao = document.getElementById("btn");
+        var title = document.getElementById("title");
+
+        botao.addEventListener("click", function(){
+            console.log("clicou...");
+            alert("Você apertou...");
+        })
+
+        botao.addEventListener("click", function(){
+            title.remove();
+            alert("O título foi removido após o click do botão!");
+        })
+
+
+	</script>
+		
+
+</body>
+
+</html>
