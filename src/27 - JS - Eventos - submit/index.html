@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+	<meta charset="UTF-8">
+    <title> JS - Eventos - Submit </title>
+    <style>
+        .error{
+            border: 2px solid red;
+        }
+    </style>  
+
+</head>
+
+<body>
+
+    <form action="#" method="POST">
+        <input type="text" name="nome" value="vitor">
+        <input type="email" name="email" value="vitorgsevero@gmail.com">
+        <button type="submit"> Enter </button>
+    </form>
+
+    <script type="text/javascript">
+
+        var form = document.querySelector("form");
+
+        form.addEventListener("submit", function(evento){
+            evento.preventDefault();
+            
+            for(let i=0; i<this.elements.length; i++){
+                var item = this.elements[i];
+                
+                if(item.type !== "submit"){
+                    if(item.value == ""){
+                        item.classList.add("error");
+                        alert("Preencha todos os campos obrigatórios em vermelho!");
+                    }else{
+                        item.classList.remove("error");
+                    }      
+                }
+                
+            }
+        });
+
+	</script>
+		
+
+</body>
+
+</html>

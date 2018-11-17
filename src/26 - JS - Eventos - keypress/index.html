@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+	<meta charset="UTF-8">
+    <title> JS - Eventos - Keypress </title>
+    <style>
+
+    </style>  
+
+</head>
+
+<body>
+
+    <input type="text" id="search"> 
+    
+    <div id="resultado" style="display:none"> Enter identificado... </div>
+
+    <script type="text/javascript">
+
+        var text = document.getElementById("search");
+        var resultado = document.getElementById("resultado");
+        const enter = 13;
+
+        text.addEventListener("keypress", function(evento){
+           if(evento.keyCode == enter){
+               resultado.style.display = "block";
+           }
+        });
+
+	</script>
+		
+
+</body>
+
+</html>

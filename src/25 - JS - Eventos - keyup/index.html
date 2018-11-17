@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+	<meta charset="UTF-8">
+    <title> JS - Eventos - Keyup </title>
+    <style>
+
+    </style>  
+
+</head>
+
+<body>
+
+    <input type="text" id="search"> 
+    
+    <div id="resultado"> Nenhum resultado </div>
+
+    <script type="text/javascript">
+
+        var texto = document.getElementById("search");             
+        var resultado = document.getElementById("resultado");
+        var resultDefaultText = "Nenhum resultado";
+
+        texto.addEventListener("keyup", function(){
+            var value = this.value;
+            if(value !== ""){
+                resultado.innerText = this.value;
+            }else{
+                resultado.innerText = resultDefaultText;
+            }
+        });
+
+	</script>
+		
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+	<meta charset="UTF-8">
+    <title> JS - Eventos - Change </title>
+    <style>
+
+    </style>  
+
+</head>
+
+<body>
+
+    <input type="text" id="nome">
+    <input type="text" id="sobrenome">
+
+
+    <script type="text/javascript">
+
+        var nome = document.getElementById("nome");
+        var sobrenome = document.getElementById("sobrenome");
+        
+        nome.addEventListener("blur", function(){
+            sobrenome.value = this.value;
+        });
+
+	</script>
+		
+
+</body>
+
+</html>

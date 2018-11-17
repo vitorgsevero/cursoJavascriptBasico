@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+	<meta charset="UTF-8">
+    <title> JS - Eventos - Change </title>
+    <style>
+
+    </style>  
+
+</head>
+
+<body>
+
+    <select name="" id="linguagens">
+        <option value="1"> Java </option>
+        <option value="2"> Kotlin </option>
+        <option value="3"> C# </option>
+    </select>
+
+    <script type="text/javascript">
+
+        var linguagens = document.getElementById("linguagens");
+
+        linguagens.addEventListener("change", function(){
+            var options = this.options;
+            var itemAtual = this.selectedIndex;
+
+            console.log(options[itemAtual].text);
+
+        });
+
+
+	</script>
+		
+
+</body>
+
+</html>
