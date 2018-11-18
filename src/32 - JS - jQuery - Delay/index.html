@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> JS - jQuery -Delay </title>
+    <style>
+         body{
+             background-color: #efefef;
+         }
+
+         .box{
+             position: relative;
+             left: 0;
+             width: 100px;
+             height: 100px;
+             background-color: pink;
+         }
+         button{
+             font-size: 2rem;
+             background-color: #000;
+             color: #fff;
+             padding: 1rem 2rem;
+             }
+
+    </style>
+</head>
+<body>
+
+    <button id="button"> hello </button>
+    <div class="mensagem"> Olá! </div>
+
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        var button = $('#button');
+        var mensagem = $('.mensagem');
+
+        button.on("click", function(){
+            mensagem.delay(5000).fadeOut();
+        });
+
+    </script>
+</body>
+</html>

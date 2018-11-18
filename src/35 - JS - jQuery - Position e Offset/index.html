@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> JS - jQuery - Position e Offset </title>
+    <style>
+              
+        .container{
+            width: 500px;
+            height: 500px;
+            background-color: black;
+            position: absolute;
+            top: 200px;
+            left: 300px;
+            padding: 20px;
+        }
+
+        .item{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            display: inline-block;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="item"></div>
+    </div>
+
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+
+            var container = $(".container");
+            var item = $(".item");
+            var posicao = item.position(); 
+
+            console.log(posicao.left, posicao.top);
+            
+    </script>
+</body>
+</html>
